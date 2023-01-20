@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* Homer Custom CSS/Theme */
+
+/* Add space to the bottom of cards */
+body #app .card-content {
+    margin-bottom: 0.50rem;
+}

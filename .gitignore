@@ -1,0 +1,16 @@
+# IGNORE FILES IN ROOT/:
+.env
+
+# IGNORE FILES IN CONFIG/:
+config/*
+
+# DO NOT IGNORE FILES IN CONFIG/:
+!config/sample.config.yml
+
+# IGNORE FILES IN DATA/:
+data/*
+
+# DO NOT IGNORE FILES IN DATA/:
+!data/backgrounds
+!data/css
+!data/icons
