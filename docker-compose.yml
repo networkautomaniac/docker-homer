@@ -17,4 +17,13 @@ services:
       - ./data/css:/www/assets/css
       - ./data/icons:/www/assets/icons
       - ./data/backgrounds:/www/assets/backgrounds
+    networks:
+      - homer
     restart: unless-stopped
+networks:
+  homer:
+    name: homer
+    ipam:
+      config:
+        - subnet: "172.16.1.0/24"
+          gateway: "172.16.1.1"
