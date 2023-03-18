@@ -9,21 +9,11 @@ services:
       - 8092:8080
     environment:
       - INIT_ASSETS=0
-      - PUID=1001
-      - PGID=1001
-    # user: 1001:1001
+      - PUID=${PUID}
+      - PGID=${PGID}
     volumes:
       - ./config/config.yml:/www/assets/config.yml
       - ./data/css:/www/assets/css
       - ./data/icons:/www/assets/icons
       - ./data/backgrounds:/www/assets/backgrounds
-    networks:
-      - homer
     restart: unless-stopped
-networks:
-  homer:
-    name: homer
-    ipam:
-      config:
-        - subnet: "172.16.1.0/24"
-          gateway: "172.16.1.1"
