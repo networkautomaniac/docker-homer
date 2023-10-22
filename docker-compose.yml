@@ -11,6 +11,7 @@ services:
       - INIT_ASSETS=0
       - PUID=${PUID}
       - PGID=${PGID}
+      - DOMAIN=${DOMAIN}
     volumes:
       - ./config/config.yml:/www/assets/config.yml
       - ./data/css:/www/assets/css
